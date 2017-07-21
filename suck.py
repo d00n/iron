@@ -11,6 +11,8 @@ for i in range(1, current_quarter + 1):
     history.append((current_year, 'QTR%d' % i))
 urls = ['https://www.sec.gov/Archives/edgar/full-index/%d/%s/master.idx' % (x[0], x[1]) for x in history]
 urls.sort()
+
+print('urls: ', urls)
  
 # Download index files and write content into SQLite
 import sqlite3
